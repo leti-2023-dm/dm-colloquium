@@ -1,0 +1,19 @@
+name: clang-tidy-review
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: "clang install"
+      run: |
+        sudo apt update && \
+        sudo apt install -y clang clang-tidy
+
+    - name: "clang-tidy"
+      run: |
+        find ${{ github.workspace }} -iname *.h -o -iname "*.cpp" | xargs clang-tidy
