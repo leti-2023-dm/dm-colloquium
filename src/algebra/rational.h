@@ -26,6 +26,6 @@ public:
 
     [[nodiscard]] const Natural& getDenominator() const;
 
-    std::string toString() override;
+    [[nodiscard]] std::string toString() const override;
 };
 #endif //LONG_OPERATIONS_RATIONAL_H

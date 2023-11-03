@@ -40,7 +40,7 @@ const Natural& Rational::getDenominator() const {
     return denominator_;
 }
 
-std::string Rational::toString() {
+std::string Rational::toString() const {
     std::string str; str.reserve(denominator_.len() + numerator_.len() + 1);
     str += numerator_.toString();
 
