@@ -74,7 +74,7 @@ void Natural::set(size_t index, uint8_t digit) {
     }
 }
 
-std::string Natural::toString() {
+std::string Natural::toString() const {
     std::string str;
     str.reserve(len_ + 1);
 
