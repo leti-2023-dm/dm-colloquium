@@ -44,8 +44,9 @@ std::string Rational::toString() const {
     std::string str; str.reserve(denominator_.len() + numerator_.len() + 1);
     str += numerator_.toString();
 
-    // print the denominator only if numerator has non-zero value
-    if(!(numerator_.len() == 1 && numerator_.get(0) == 0)) {
+    // print the denominator only if numerator has non-zero value and if denominator is not equal to 1
+    if(!(numerator_.len() == 1 && numerator_.get(0) == 0) &&
+        !(denominator_.len() == 1 && denominator_.get(0) == 1)) {
         str += "/";
         str += denominator_.toString();
     }
