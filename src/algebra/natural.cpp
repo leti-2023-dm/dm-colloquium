@@ -27,6 +27,8 @@ Natural::Natural(std::string_view string_number) {
             // numbers are stored in reverse order (by architecture)
             number_.push_back(static_cast<uint8_t>(string_number[len_ - i] - '0'));
         }
+
+        deleteLeadingZeroes();
     }
 }
 
@@ -80,4 +82,16 @@ std::string Natural::toString() {
     }
 
     return str;
+}
+
+void Natural::deleteLeadingZeroes() {
+    size_t last = len_ - 1;
+    while(last != 0 && number_[last] == 0) {
+        if(number_[last] == 0) {
+            number_.pop_back();
+            last -= 1;
+        }
+    }
+
+    len_ = number_.size();
 }
