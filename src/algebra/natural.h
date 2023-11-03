@@ -17,6 +17,8 @@ class Natural: public Algebra {
 
     [[nodiscard]] bool validateIndex(size_t index, size_t limit) const;
 
+    void deleteLeadingZeroes();
+
 public:
     explicit Natural(std::string_view string_number);
 
