@@ -70,6 +70,7 @@ void Natural::set(size_t index, uint8_t digit) {
     if(validateIndex(index) && digit <= 9) {
         // number is stored in reverse order, so calculating index
         number_[index] = digit;
+        deleteLeadingZeroes();
     }
 }
 
