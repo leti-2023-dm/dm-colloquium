@@ -22,7 +22,7 @@ public:
 
     [[nodiscard]] uint16_t get(size_t index) const;
 
-    [[nodiscard]] Natural getNatural() const;
+    [[nodiscard]] const Natural& getNatural() const;
 
     void changeSign();
 

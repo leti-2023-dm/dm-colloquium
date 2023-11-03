@@ -29,12 +29,12 @@ uint16_t Integer::get(size_t index) const {
     return number_.get(index);
 }
 
-Natural Integer::getNatural() const {
+const Natural& Integer::getNatural() const {
     return number_;
 }
 
 void Integer::changeSign() {
-    sign_ = false;
+    sign_ = !sign_;
 }
 
 size_t Integer::len() const {
