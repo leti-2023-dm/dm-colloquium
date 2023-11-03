@@ -30,7 +30,7 @@ public:
 
     [[nodiscard]] size_t len() const;
 
-    std::string toString() override;
+    [[nodiscard]] std::string toString() const override;
 };
 
 
