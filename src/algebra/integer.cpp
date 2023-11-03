@@ -41,7 +41,7 @@ size_t Integer::len() const {
     return number_.len();
 }
 
-std::string Integer::toString() {
+std::string Integer::toString() const {
     std::string str;
     str.reserve(number_.len() + 1);
 
