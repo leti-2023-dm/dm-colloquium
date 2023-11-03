@@ -11,6 +11,11 @@ Integer::Integer(std::string_view string_number) : number_(Natural("0")), sign_(
         }
 
         number_ = Natural(string_number);
+
+        // check to prevent -0 situation
+        if(number_.len() == 1 && number_.get(0) == 0) {
+            sign_ = false;
+        }
     }
 }
 
