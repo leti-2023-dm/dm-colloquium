@@ -22,9 +22,9 @@ public:
 
     void setDenominator(const Natural& natural);
 
-    [[nodiscard]] Integer getNumerator() const;
+    [[nodiscard]] const Integer& getNumerator() const;
 
-    [[nodiscard]] Natural getDenominator() const;
+    [[nodiscard]] const Natural& getDenominator() const;
 
     std::string toString() override;
 };
