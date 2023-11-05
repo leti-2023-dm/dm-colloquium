@@ -36,6 +36,8 @@ void Polynomial::set(size_t index, const Rational& coefficient) {
 const Rational& Polynomial::get(size_t index) const {
     if(index <= deg_) {
         return coefficients_[index];
+    } else {
+        throw std::invalid_argument("\nInvalid index was given in a get method of Polynomial class\n");
     }
 }
 
