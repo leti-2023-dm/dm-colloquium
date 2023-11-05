@@ -1,4 +1,4 @@
-#include "Operation0Rational.h"
+#include "operation0Rational.h"
 
 Algebra *Operation0Rational::get() const {
     return operationObject_;
