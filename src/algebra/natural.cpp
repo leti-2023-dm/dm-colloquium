@@ -57,9 +57,9 @@ uint16_t Natural::get(size_t index) const {
     if(validateIndex(index)) {
         // number is stored in reverse order, so calculating index
         return static_cast<uint16_t>(number_[index]);
+    } else {
+        throw std::invalid_argument("\nInvalid index was given to a get function in Natural or Rational classes\n");
     }
-
-    return 0;
 }
 
 size_t Natural::len() const {
