@@ -3,7 +3,7 @@
 #include "../../operation/operation2Natural.h"
 
 class COM_NN_D: public Operation2Natural{
-protected:
+public:
     Natural* get(Natural* firstOperand, Natural* secondOperand) const;
 };
 
