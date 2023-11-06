@@ -11,7 +11,8 @@ Polynomial *DER_P_P::get(Polynomial *operand) const
 {
     size_t n = operand->deg();
 
-    std::vector<Rational> vec(n - 1);
+    Rational coef = operand->get(n);
+    std::vector<Rational> vec(n - 1, coef);
     Polynomial *result = new Polynomial(vec);
 
     for (size_t i = 1; i <= n; i++)
