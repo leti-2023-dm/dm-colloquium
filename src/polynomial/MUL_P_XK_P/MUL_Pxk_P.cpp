@@ -13,7 +13,8 @@ Polynomial *MUL_Pxk_P::get(Polynomial *firstOperand, Polynomial *secondOperand) 
     size_t n = firstOperand->deg();
     size_t k = secondOperand->deg();
 
-    std::vector<Rational> vec(n + k + 1);
+    Rational coef = firstOperand->get(n);
+    std::vector<Rational> vec(n + k + 1, coef);
     Polynomial *result = new Polynomial(vec);
 
     size_t i;
