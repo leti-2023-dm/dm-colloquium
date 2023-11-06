@@ -22,6 +22,8 @@ class Natural: public Algebra {
 public:
     explicit Natural(std::string_view string_number);
 
+    explicit Natural(std::vector<uint8_t> number);
+
     Natural(const Natural& other);
 
     Natural(const Natural& other, size_t startInd, size_t endInd);
