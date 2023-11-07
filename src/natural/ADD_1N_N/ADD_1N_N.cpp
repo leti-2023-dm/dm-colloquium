@@ -11,7 +11,10 @@ Natural* ADD_1N_N::get(Natural* obj) const{
         }
     }
     if(flag)
-        return new Natural(obj->toString()); // not all digits are equal 9
-    std::string resultStr = "1" + std::string(obj->len(), '0');
-    return new Natural(resultStr);
+        return new Natural(*obj); // not all digits are equal 9
+    // std::string resultStr = "1" + std::string(obj->len(), '0');
+    // return new Natural(resultStr);
+    std::vector<uint8_t> result(obj->len(), 0);
+    result.push_back(1);
+    return new Natural(result);
 }
