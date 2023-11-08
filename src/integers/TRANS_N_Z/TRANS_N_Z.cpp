@@ -1,12 +1,15 @@
-#ifndef MUL_ZM_Z_cpp
-#define MUL_ZM_Z_cpp
-#include "/MUL_ZM_Z.h"
-
-Integer* MUL_ZM_Z::get(Integer* obj) const
-{	
-	Integer* res = new Integer(obj->toString());
-	res->changeSign();
-	return res;
+#ifndef TRANS_N_Z_cpp
+#define TRANS_N_Z
+#include "TRANS_N_Z.h"
+Algebra* TRANS_N_Z::get(Algebra* object) const
+{
+    auto* objectInteger = dynamic_cast<Integer*>(object);
+    return get(objectInteger);
 }
 
-#endif // !MUL_ZM_Z_cpp
+Integer* TRANS_N_Z::get(Natural* object)
+{
+    Integer* res = new Integer(object, false);
+    return res;
+}
+#endif // !TRANS_N_Z_cpp
