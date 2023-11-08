@@ -4,7 +4,7 @@
 
 Integer* MUL_ZM_Z::get(Integer* obj) const
 {	
-	Integer* res = new Integer(obj);
+	Integer* res = new Integer(obj->toString());
 	res->changeSign();
 	return res;
 }
