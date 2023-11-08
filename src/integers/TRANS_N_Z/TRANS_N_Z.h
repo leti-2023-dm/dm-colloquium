@@ -1,10 +1,9 @@
-#ifndef MUL_ZM_Z_h
-#define MUL_ZM_Z_h
-#include "../../operation/operation1Integer.h"
-
-class MUL_ZM_Z : public Operation1Integer { //function changes sign of number
-public:
-    Integer* get(Integer* obj) const;
+#ifndef TRANS_N_Z_h
+#define TRANS_N_Z_h
+#include "../../operation/operation1.h"
+#include "../../algebra/integer.h"
+class TRANS_N_Z : public Operation1 {
+	Algebra* TRANS_N_Z::get(Algebra* object) const;
+	Integer* TRANS_N_Z::get(Natural* object)
 };
-
-#endif // !MUL_ZM_Z_h
+#endif
