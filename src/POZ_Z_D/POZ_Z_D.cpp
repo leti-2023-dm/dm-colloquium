@@ -5,11 +5,11 @@
 Integer* POZ_Z_D::get(Integer* obj) const
 {
 	if (obj->len() == 1 && obj->get(0) == 0) {
-		return Integer("0");
+		return new Integer("0");
 	}
 	if (obj->hasSign()) {
-		return Integer("1");
+		return new Integer("1");
 	}
-	return Integer("2");
+	return new Integer("2");
 }
 #endif 
