@@ -96,3 +96,13 @@ void Natural::deleteLeadingZeroes() {
 
     len_ = number_.size();
 }
+
+Natural::Natural(std::vector<uint8_t> number) {
+    if(!std::all_of(number.begin(), number.end(), [] (uint8_t digit) { return digit <= 9; })) {
+        throw std::invalid_argument("\nOne of the digits in vector is not in [0, 9] range (Natural constructor).\n");
+    }
+
+    number_ = number;
+    len_ = number.size();
+    deleteLeadingZeroes();
+}
