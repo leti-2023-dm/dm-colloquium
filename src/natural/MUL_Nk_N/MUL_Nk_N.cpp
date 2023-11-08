@@ -21,3 +21,8 @@ Natural* MUL_Nk_N::get(Natural* firstOperand, Natural* secondOperand) const {
     for (size_t i = 0; i < firstOperand->len(); i++) number.push_back(firstOperand->get(i));
     return new Natural(number);
 }
+
+Natural *MUL_Nk_N::get(Natural *firstOperand, size_t secondOperand) const {
+    auto secOp = new Natural(std::to_string(secondOperand));
+    return get(firstOperand, secOp);
+}
