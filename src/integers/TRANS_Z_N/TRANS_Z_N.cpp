@@ -9,10 +9,9 @@ Algebra* TRANS_Z_N::get(Algebra* object) const
 
 Natural* TRANS_Z_N::get(Integer* object)
 {
-    if (!object->hasSign())
+    if (object->hasSign())
     {
-        Natural* result = new Natural(object->getNatural());
-        return result;
+        throw std::invalid_argument("\nIt is not possible to convert a negative integer to a natural number\n");
     }
-    return nullptr; 
+    return new Natural(object->getNatural());
 }
