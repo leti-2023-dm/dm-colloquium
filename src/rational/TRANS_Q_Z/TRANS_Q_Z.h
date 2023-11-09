@@ -6,7 +6,7 @@
 
 class TRANS_Q_Z : Operation1 {
 public:
-    Rational* get(Integer* operationObject) const;
+    Integer* get(Rational* operationObject) const;
     Algebra* get(Algebra* operationObject) const override;
 };
 
