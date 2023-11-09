@@ -7,7 +7,7 @@
 
 class DIV_NN_Dk: public Operation2Natural{
 public:
-    Natural* get(Natural* firstOperand, Natural* secondOperand) const;
+    Natural* get(Natural* firstOperand, Natural* secondOperand) const override;
 };
 
 #endif

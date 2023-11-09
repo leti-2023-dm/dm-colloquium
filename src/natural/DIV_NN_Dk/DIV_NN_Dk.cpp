@@ -12,15 +12,16 @@ Natural* DIV_NN_Dk::get(Natural* firstOperand, Natural* secondOperand) const{
         return new Natural("1"); // the operands are equal
     } else {
         bool flag = false;
+        Natural divider(*secondOperand); // copying secondOperand to another variable, so it remains unchanged
         for(k = firstOperandLen - 1; k >= 0; --k){
             Natural divisible(*firstOperand, k, firstOperandLen); // adding another digit
-            while(COM_NN_D().get(&divisible, secondOperand)->get(0) == 2){
-                secondOperand = MUL_ND_N().get(secondOperand, &firstDigit);
+            while(COM_NN_D().get(&divisible, &divider)->get(0) == 2){
+                divider = MUL_ND_N().get(&divider, &firstDigit);
                 firstDigit.set(0, firstDigit.get(0) + 1);
                 flag = true;
             }
             if(flag){ // found a firstDigit
-                if(COM_NN_D().get(&divisible, secondOperand)->get(0) == 1) // confirming that we got an actual first digit
+                if(COM_NN_D().get(&divisible, divider)->get(0) == 1) // confirming that we got an actual first digit
                     firstDigit.set(0, firstDigit.get(0) - 1);
                 break;
             }
