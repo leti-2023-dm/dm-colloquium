@@ -4,9 +4,10 @@
 
 
 
-class TRANS_Z_Q : Operation1Rational {
+class TRANS_Z_Q : Operation1 {
 public:
     Rational* get(Integer* operationObject) const;
+    Algebra* get(Algebra* operationObject) override;
 };
 
 #endif //LONG_OPERATIONS_TRANS_Z_Q_H
