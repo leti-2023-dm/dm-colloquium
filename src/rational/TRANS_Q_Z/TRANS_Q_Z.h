@@ -4,11 +4,10 @@
 
 
 
-class TRANS_Q_Z : Operation1Rational {
+class TRANS_Q_Z : Operation1 {
 public:
-    // Rational* get(Rational* operationObject) const final;
-    // There I can't change returning meaning, so...
-    Integer* get_Z(Rational* operationObject) const;
+    Rational* get(Integer* operationObject) const;
+    Algebra* get(Algebra* operationObject) const override;
 };
 
 #endif //LONG_OPERATIONS_TRANS_Q_Z_H
