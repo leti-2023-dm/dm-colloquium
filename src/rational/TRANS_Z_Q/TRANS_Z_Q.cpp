@@ -5,5 +5,5 @@ Rational* TRANS_Z_Q::get(Integer* operationObject) const {
 }
 
 Algebra* TRANS_Z_Q::get(Algebra* operationObject) const {
-    return new Rational(*operationObject);
+    return new Algebra(*operationObject);
 }
