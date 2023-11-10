@@ -1,5 +1,5 @@
-#ifndef ADD_NN_N
-#define ADD_NN_N
+#ifndef ADD_NN_N_dir
+#define ADD_NN_N_dir
 #include "../../operation/operation2Natural.h"
 
 #include "../COM_NN_D/COM_NN_D.h"
