@@ -8,7 +8,7 @@ Natural* ADD_NN_N::get(Natural* firstOperand, Natural* secondOperand){
 	if(firstLen > secondLen){
 		n = firstLen;
 		biggerOperand = firstOperand;
-	}else n = SecondLen;
+	}else n = secondLen;
 	std::vector<uint8_t> answer(n); //вектор длины n из нулей
 	uint8_t buff = 0; //buffer, в котором хранится текущая переменная
 	int i = 0;
@@ -26,7 +26,7 @@ Natural* ADD_NN_N::get(Natural* firstOperand, Natural* secondOperand){
 	}
 
 	if(buff != 0) answer.push_back(buff);
-	Natural* ans = new Natural{answer};
+	Natural* ans = new Natural(answer);
 	return ans;
 
 }
