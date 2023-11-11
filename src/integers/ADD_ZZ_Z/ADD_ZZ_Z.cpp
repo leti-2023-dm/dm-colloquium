@@ -2,7 +2,7 @@
 #include "../ABS_Z_N/ABS_Z_N.h"
 #include "../../natural/ADD_NN_N/ADD_NN_N.h"
 #include "../../natural/COM_NN_D/COM_NN_D.h"
-// #include "../../natural/SUB_NN_N/SUB_NN_N.h"
+#include "../../natural/SUB_NN_N/SUB_NN_N.h"
 
 Integer* ADD_ZZ_Z::get(Integer* firstOperand, Integer* secondOperand) const
 {
