@@ -1,11 +1,14 @@
-#ifndef ABS_Z_N_h
-#define ABS_Z_N_h
-#include "../../operation/operation0Integer.h"
+#ifndef ABS_Z_N_H
+#define ABS_Z_N_H
+
+#include "../../operation/operation1.h"
 #include "../../algebra/integer.h"
 
-class ABS_Z_N: public Operation0Integer{
+class ABS_Z_N: public Operation1
+{
 public:
-    Natural* get(Integer *obj) const;
+    Algebra* get(Algebra* object) const override;
+    [[nodiscard]] Natural* get(Integer* object);
 };
 
 #endif
