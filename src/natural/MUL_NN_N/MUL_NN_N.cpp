@@ -2,13 +2,8 @@
 #include "../MUL_ND_N/MUL_ND_N.h"
 #include "../MUL_Nk_N/MUL_Nk_N.h"
 #include <map>
-/*#include "../ADD_NN_N/ADD_NN_N.h"*/
-class ADD_NN_N: Operation2Natural{
-public:
-    Natural * get(Natural *firstOperand, Natural *secondOperand) const override{
-        return nullptr;
-    }
-};
+#include "../ADD_NN_N/ADD_NN_N.h"
+
 
 Natural *MULL_NN_N::get(Natural *firstOperand, Natural *secondOperand) const {
     ADD_NN_N add;
