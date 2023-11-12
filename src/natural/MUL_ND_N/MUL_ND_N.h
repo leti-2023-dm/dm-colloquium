@@ -6,6 +6,7 @@
 class MUL_ND_N: public Operation2Natural {
     public:
         Natural* get(Natural* firstOperand, Natural* secondOperand) const;
+        Natural* get(Natural* firstOperand, uint8_t secondOperand) const;
 };
 
 #endif
