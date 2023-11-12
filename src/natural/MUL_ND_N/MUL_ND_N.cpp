@@ -24,3 +24,10 @@ Natural* MUL_ND_N::get(Natural* firstOperand, Natural* secondOperand) const {
         return new Natural(number);
     }
 }
+
+Natural *MUL_ND_N::get(Natural *firstOperand, uint8_t secondOperand) const {
+    if (secondOperand > 9)
+        throw std::invalid_argument("Second operand is not digit");
+    auto secOp = new Natural(std::to_string(secondOperand));
+    return get(firstOperand, secOp);
+}
